@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+    <link rel="stylesheet" href="~/Content/StoreStyles/MainStyles.css">
+}
+<body>
+    <div class="main">
+        @{int author = 1; }
+        @for (int article = 1; article <= 5; article++)
+        {
+            if (article == 3)
+            {
+                author = 2;
+            }
+        <article>
+            <img src="~/Content/StoreImages/blog-image@(article).jpg" class="article-img" alt="HTML5" width="700" height="500">
+            <div class="container">
+                <h3>We Help You To Make Front-end Great Again</h3>
+                <div class="article-context">
+                    <img class="img-author" src="~/Content/StoreImages/author-image@(author).jpg" alt="HTML5" width="50" height="50">
+                    <div class="author">
+                        Jen Lopez
+                        <div class="article-datetime">
+                            Jully 22, 2017
+                        </div>
+                        <i class="far fa-comment"></i> 35 Comments
+                    </div>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <button type="button" class="continue-reading">Countinue</button>
+                <hr>
+            </div>
+        </article>
+        }
+    </div>
+</body>

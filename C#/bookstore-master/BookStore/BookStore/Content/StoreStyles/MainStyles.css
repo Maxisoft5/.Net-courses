@@ -1,0 +1,45 @@
+﻿body {
+
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin-left: 70px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: snow;
+}
+
+.img-author{
+    border-radius: 40px;
+}
+
+.main {
+    width: 900px;
+}
+
+.content {
+    width: 250px;
+    margin-right: 20px;
+}
+
+aside {
+    width:auto;
+}
+
+hr {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    text-decoration: none !important;
+}
+
+

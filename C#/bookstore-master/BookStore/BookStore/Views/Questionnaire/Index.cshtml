@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+    <link rel="stylesheet" href="~/Content/StoreStyles/QuestionaryStyle.css">
+}
+
+@helper ChooseAnswers(List<string> questions, string name)
+{
+using (Html.BeginForm("GiveAnswers", "Questionnaire", FormMethod.Post ))
+{
+        <ol>
+            <li>
+                @Html.CheckBox("answer", "1-2") <span>1-2</span> @Html.CheckBox("answer", "5-6") <span>5-6</span> @Html.CheckBox("answer", "10-20") <span>10-20</span>
+                <a>How many unreading books do you have in your library?</a>
+
+                <input type="checkbox" name="answer" value="1-2">1-2<br>
+            </li>
+                <li>
+                    @Html.CheckBox("answer", "Yes") <span>Yes</span> @Html.CheckBox("answer", "No") <span>No</span>
+                    <a>Do you rereading your books?</a>
+                </li>
+                <li>
+                    @Html.CheckBox("answer", "0") <span>0</span> @Html.CheckBox("answer", "1-2") <span>1-2</span>  @Html.CheckBox("answer", "3-4") <span>3-4</span>
+                    <a>How many books do you read per month?</a>
+                </li>
+            </ol>
+        <button type="submit" id="submit">Submit</button>
+    }
+}
+
+
+<div class="main">
+    <h2>Questionary</h2>
+
+    <form action="../../form-result.php" method="post" target="_blank">
+
+        <p>
+
+            Current employment:<br>
+
+            <input type="radio" name="currentemployment" value="fulltime"> Full-time<br>
+
+            <input type="radio" name="currentemployment" value="parttime"> Part-time<br>
+
+            <input type="radio" name="currentemployment" value="notemployed"> Not employed
+
+        </p>
+
+        <p><input type="submit" value="Send data"></p>
+
+    </form>
+
+
+    @ChooseAnswers(ViewBag.Questions as List<string>, "Qustions")
+</div>

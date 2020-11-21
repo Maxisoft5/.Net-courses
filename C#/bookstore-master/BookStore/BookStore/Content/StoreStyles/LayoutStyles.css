@@ -1,0 +1,158 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic);
+header {
+    width: 100%;
+    display: inline;
+    background-color: azure;
+    text-align:center;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header" "." "content" "." "sidebar" "." "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+}
+
+main {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row-reverse;
+    margin: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.library-logo {
+    float: left;
+    margin-left: 100px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 500;
+    font-family: 'Lora', serif;
+    padding-top: 20px !important;
+    padding-right: 170px !important;
+    color: saddlebrown;
+    font-size: 35px;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.content {
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    float: right;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 15px;
+    color: grey;
+    font-size: 15px;
+    background-color: lightblue;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: lightcyan;
+}
+
+.menu li {
+    padding: 20px;
+    font-family: 'Lora', serif;
+    width: 225px;
+    margin:0px;
+}
+
+.menu li:hover {
+    background-color: lightgreen;
+}
+
+
+#up-btwn {
+    display: inline-block;
+    background-color: lightblue;
+    font-size: 18px;
+    border: 1px solid lightblue;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 80px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#up-btwn:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#up-btwn:active {
+    background-color: #555;
+}
+#up-btwn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-mail {
+    position:relative;
+    left: 15px;
+}
+
+h2 {
+    color: saddlebrown;
+    font-size: 28px !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    text-decoration: none !important;
+}
+

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <title>Book's Library</title>
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/layoutCss")
+</head>
+<body>
+    <header>
+        <img src="~/Content/StoreImages/Logo.jpg" class="library-logo" alt="HTML5" width="150" height="150">
+        <h1>BOOK LIBRARY</h1>
+    </header>
+    <main>
+        <aside>
+            <ul class="menu">
+                <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                <li>@Html.ActionLink("Гостевая", "Index", "Guest")</li>
+                <li>@Html.ActionLink("Анкета", "Index", "Questionnaire")</li>
+            </ul>
+        </aside>
+        @RenderBody()
+        <div class="content">
+            <h2>Last Vieved News</h2>
+            @for (int article = 0; article < 5; article++)
+            {
+                <section>
+                    <h3>
+                        The standard Lorem Ipsum passage, used since the 1500s № @(article)
+                    </h3>
+                    <p>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </p>
+
+                    <button>Read</button>
+                </section>
+            }
+        </div>
+    </main>
+
+    <footer>
+        <button id="up-btwn">To Up</button>
+        <p>
+            &copy; @DateTime.Now.Year - Book Library by <a href="https://www.linkedin.com/in/maxim-grynyuk-a7263a189/">Maxim Grynyuk</a>
+            <a href="mailto:maxisoft4@gmail.com">
+                maxisoft4@gmail.com
+                <img src="~/Content/StoreImages/mail.svg" width="20" height="20" alt="icon" class="icon-mail" />
+            </a>
+        </p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/layoutScripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

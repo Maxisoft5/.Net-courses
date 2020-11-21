@@ -1,0 +1,20 @@
+﻿body {
+}
+.main {
+    width: 900px;
+    padding: 20px;
+}
+.content {
+    width: 400px;
+}
+input[type=checkbox] {
+    margin-top:20px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    text-decoration: none !important;
+}

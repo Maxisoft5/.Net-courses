@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/StoreStyles/GustStyles.css">
+}
+
+@{int author = 1;
+    string name = "Jen Lopez";
+}
+<div class="main">
+    <section>
+        <h2>Reviews</h2>
+        @for (int article = 0; article < 5; article++)
+        {
+            if (article == 3)
+            {
+                author = 2;
+                name = "John Snow";
+            }
+            <article class="response">
+                <div class="container">
+                    <div class="article-context">
+                        <img class="img-author" src="~/Content/StoreImages/author-image@(author).jpg" alt="HTML5" width="50" height="50">
+                        <div class="author">
+                            @(name)
+                            <div class="article-datetime">
+                                Jully 2@(article), 2017
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <button type="button" class="continue-reading">Reply</button>
+                    <hr>
+                </div>
+            </article>
+        }
+    </section>
+    <section class="input-form">
+        <form action="#contact" method="get" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="contact_name" name="contact_name" class="form-control"
+                       placeholder="FirstName" required />
+            </div>
+            <div class="form-group">
+                <input type="text" id="contact_name" name="contact_name" class="form-control"
+                       placeholder="LastName" required />
+            </div>
+            <div class="form-group">
+                <input type="email" id="contact_email" name="contact_email" class="form-control"
+                       placeholder="Email" required />
+            </div>
+            <div class="form-group">
+                <textarea id="contact_message" name="contact_message" class="form-control" rows="9"
+                          placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Submit</button>
+        </form>
+    </section>
+</div>
